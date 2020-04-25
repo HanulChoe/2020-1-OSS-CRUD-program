@@ -14,6 +14,40 @@ void Initialize(Record **rec,int max)
      memset(rec, 0, sizeof(Record *)*max);// Initialize memorys    
 }
 
+void add_a_txt_new_stduent(Record records[], int *stuNum){
+
+  FILE *fp;
+  fp = fopen("student.txt", "r");
+  printf("Open student data\n");
+  
+  printf("%s %s %-15s%-25s%-15s%-30s\n", "Index", "Student ID", "Student Name", "Major", "Phone Number", "E-mail");
+  printf("----------------------------------------------------------------------------------------------\n");
+  
+  while(1)  {
+   	char input_studentId[32];
+    char input_studentName[32];
+    char input_major[64];
+    char input_phoneNum[32];
+    char input_email[64];
+    int count = 0;  
+
+   fscanf(fp, "%s %s %s %s %s", input_studentId, input_studentName, input_major, input_phoneNum, input_email);
+   if(feof(fp)) break;
+   printf("%-6d%s   %-15s%-25s%-15s%-30s\n", count+1, input_studentId, input_studentName, input_major, input_phoneNum, input_email);
+
+   strcpy(records[count].studentId ,input_studentId);
+   strcpy(records[count].studentName , input_studentName);
+   strcpy(records[count].major , input_major);
+   strcpy(records[count].phoneNum , input_phoneNum);
+   strcpy(records[count].email,input_email);
+   count++;
+   }
+   printf("\n----------------------------------------------------------------------------------------------\n");
+   fclose(fp);
+   printf("Complete!! \n\n");
+}
+
+
 // Function: add_a_record()
 // Input: record - array of Records; this may contain empty elements in the middle
 // Output: none
