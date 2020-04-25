@@ -21,9 +21,10 @@ void Initialize(Record **rec,int max)
 // - create new student data from student.txt
 void add_a_txt_new_stduent(Record records[], int *stuNum){
 
+  int count = 0;  
   FILE *fp;
   fp = fopen("student.txt", "r");
-  printf("Open student data\n");
+  printf("Open student data in 'student.txt'\n");
   
   printf("%s %s %-15s%-25s%-15s%-30s\n", "Index", "Student ID", "Student Name", "Major", "Phone Number", "E-mail");
   printf("----------------------------------------------------------------------------------------------\n");
@@ -34,7 +35,6 @@ void add_a_txt_new_stduent(Record records[], int *stuNum){
     char input_major[64];
     char input_phoneNum[32];
     char input_email[64];
-    int count = 0;  
 
    fscanf(fp, "%s %s %s %s %s", input_studentId, input_studentName, input_major, input_phoneNum, input_email);
    if(feof(fp)) break;
@@ -48,6 +48,7 @@ void add_a_txt_new_stduent(Record records[], int *stuNum){
    count++;
    }
    printf("\n----------------------------------------------------------------------------------------------\n");
+   printf("Number of added student is %d\n", count);
    fclose(fp);
    printf("Complete!! \n\n");
 }
