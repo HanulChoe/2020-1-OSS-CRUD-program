@@ -14,6 +14,11 @@ void Initialize(Record **rec,int max)
      memset(rec, 0, sizeof(Record *)*max);// Initialize memorys    
 }
 
+
+// Function: add_a_txt_new_student(Record records[], int *stuNum)
+// Input: record - array of Records; this may contain empty elements in the middle
+// Output: none
+// - create new student data from student.txt
 void add_a_txt_new_stduent(Record records[], int *stuNum){
 
   FILE *fp;
@@ -46,7 +51,6 @@ void add_a_txt_new_stduent(Record records[], int *stuNum){
    fclose(fp);
    printf("Complete!! \n\n");
 }
-
 
 // Function: add_a_record()
 // Input: record - array of Records; this may contain empty elements in the middle
