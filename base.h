@@ -6,6 +6,7 @@
 // function prototypes
 void Initialize(Record **rec,int max);
 void add_a_new_stduent(Record[], int *stuNum);
+void add_a_txt_new_stduent(Record records[], int *stuNum);
 void print_list(Record records[], int *stuNum);
 void save_list(Record[], int *stuNum);
 void update_student_info(Record[], int *stuNum);
