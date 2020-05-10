@@ -56,7 +56,7 @@ This is elementary CRUD program called Student's  information management program
  ###  2-4 save_list 
       When selected the option ‘4’ This function implement.
       This function stores information in the current structure in the computer as a study.txt file.
-      If saving data succeed print out “saved txt.”(Figure 9). After that student.txt is created.
+      If saving data succeed print out “saved txt”. After that student.txt is created.
       
  ## 3. Update
       When selected the option ‘6’ This function implement. Program print the message ‘select to update information option.
