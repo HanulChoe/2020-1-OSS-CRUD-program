@@ -3,7 +3,10 @@ Student's information management program (main.c)
 Models
 ------
 
-This is elementary CRUD program called Student's  information management program.
+This is elementary CRUD program called Student's information management program.
+There are 8 files to run this program. base.h, base.c, extras.h, extras.c, main.c, record.h Makefile.
+When you compile these files you can get student.out file.
+You can get the data file student.txt of student information, When you run the program.
 
 * Create
    - add_a_txt_new_stduent
