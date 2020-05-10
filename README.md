@@ -1,4 +1,4 @@
-Student's information management program (main.c)
+Student's information management program
 ========================================
 Models
 ------
