@@ -30,10 +30,14 @@ void sort(Record *records, int *stuNum){
 void find_student(Record records[], int *stuNum){
   
   char find_info[32];
+  char find_major[32];
   int count=0;
   int check=1;
 
   do{
+    printf("Enter the student major: ");
+    scanf("%s", find_major);
+    getchar();
 
     printf("Enter the name of student: ");
     scanf("%s", find_info);
@@ -43,11 +47,16 @@ void find_student(Record records[], int *stuNum){
     printf("-----------------------------------------------------------------------------------------\n");
       // find students in records[]
       for(int i=0; i<(*stuNum); i++){
-        if(strcmp(find_info, records[i].studentName) == 0){
-          printf("[%s] %-15s%-25s%-15s%-30s\n", records[i].studentId, records[i].studentName,  records[i].major, records[i].phoneNum, records[i].email);
-          count++;
+        if(strcmp(find_major, records[i].major) == 0){ 
+
+          if(strcmp(find_info, records[i].studentName) == 0){
+            printf("[%s] %-15s%-25s%-15s%-30s\n", records[i].studentId, records[i].studentName,  records[i].major, records[i].phoneNum, records[i].email); 
+            count++;
         }
+        }
+       
        }
+
     printf("-----------------------------------------------------------------------------------------\n");
     // check the data exist
     if(count == 0)
